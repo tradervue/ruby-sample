@@ -7,10 +7,12 @@ class Import
 
   def initialize(username, password)
     @auth = { :username => username, :password => password }
+    @user_agent = "Ruby sample application (https://github.com/tradervue/ruby-sample)"
   end
 
   def status
     opts = {}
+    opts[:headers] = { "User-Agent" => @user_agent }
     opts[:basic_auth] = @auth
     resp = self.class.get("/imports", opts)
     puts resp
@@ -33,6 +35,7 @@ class Import
     }
 
     opts = {}
+    opts[:headers] = { "User-Agent" => @user_agent }
     opts[:basic_auth] = @auth
     opts[:body] = req
     resp = self.class.post("/imports", opts)
