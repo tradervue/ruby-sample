@@ -11,7 +11,7 @@ execs = [
   {
     "datetime" => "2013-02-07T09:53:34-05:00",
     "symbol" => "SPY",
-    "quantity" => "qr",
+    "quantity" => "100",
     "price" => "151.05",
     "option" => "",
     "commission" => "1.00",
