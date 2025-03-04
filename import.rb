@@ -3,7 +3,7 @@ require 'httparty'
 class Import
   include HTTParty
 
-  base_uri("https://www.tradervue.com/api/v1")
+  base_uri("https://app.tradervue.com/api/v1")
 
   def initialize(username, password)
     @auth = { :username => username, :password => password }
